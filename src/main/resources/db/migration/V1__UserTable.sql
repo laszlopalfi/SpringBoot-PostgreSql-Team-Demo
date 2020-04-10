@@ -1,0 +1,7 @@
+CREATE TABLE "User"(
+   "id" UUID NOT NULL,
+   firstName VARCHAR (20) UNIQUE NOT NULL,
+   lastName VARCHAR (20) NOT NULL,
+   email VARCHAR (20) UNIQUE NOT NULL,
+   age SMALLINT NOT NULL
+);
