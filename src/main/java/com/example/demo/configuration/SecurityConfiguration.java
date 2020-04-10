@@ -26,8 +26,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(final HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/user/**").authenticated()
-                .and().httpBasic();
+                .antMatchers("/user/*")
+                .authenticated()
+                .and()
+                .csrf().disable()
+                .httpBasic();
     }
 
     @Bean

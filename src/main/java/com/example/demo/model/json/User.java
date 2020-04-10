@@ -10,11 +10,12 @@ public class User {
 
     @NotNull(message = "Name cannot be null!")
     @NotEmpty(message = "Name cannot be empty")
-    @Length(max = 20, message = "Name should be at max 10 characters")
+    @Length(max = 20, message = "Name should be at max 20 characters")
     private String name;
 
-    @NotNull(message = "Email cannot be null!")
     @Email
+    @NotNull(message = "Email cannot be null!")
+    @Length(max = 20, message = "Email should be at max 20 characters")
     private String email;
 
     @NotNull(message = "Date of birth cannot be null")
